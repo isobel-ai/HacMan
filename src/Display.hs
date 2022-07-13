@@ -54,11 +54,7 @@ pelletCol = white
 textCol :: Color
 textCol = white
 
-{- Set sprite properties.
-   * Functions and definitions imported from Graphics.Gloss.Picture and Color in order to create and edit Pictures.
-   * The ghostDrawn definition was made as each of the ghosts are drawn the same way, so the function reduces the
-     amount of repeated code.
--}
+-- Set sprite properties.
 pacManFile :: FilePath
 pacManFile = "assets/PACMAN.png"
 
@@ -153,10 +149,6 @@ scaredDrawn = scale (scaredW / squareSizeF) (scaredH / squareSizeF) $ Color (dar
    - rGen takes an input and uses it along with the current time of day to make a standard random generator.
    - translatePic is a higher order function that takes a CoOrd and turns it into a function that takes in a Picture
      and returns it translated by values determined by CoOrd.
-   * where clauses are used to make the top-level functions more readable.
-   * A mixture of pound operators and brackets are used to make the code clearer.
-   * Functions from Data.Time.Clock, System.IO.Unsafe, System.Random and Graphics.Gloss.Picture are used to make 
-     the functions more consise.
 -}
 type CoOrd = (Int, Int)
 
